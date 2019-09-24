@@ -68,7 +68,7 @@ const App = () => {
       <header className='topbar'>
         <h1 className='topbarHeader'>
           <span>Get posts from Github</span>
-          {/* <img alt='Github logo' src={githubImage} /> */}
+          <img alt='Github logo' src={githubImage} />
         </h1>
       </header>
       <PostNumberChanger
