@@ -1,5 +1,5 @@
-import React from "react";
-import "./styles.scss";
+import React from 'react';
+import './styles.scss';
 
 const Posts = ({ posts, loading }) => {
   if (loading) {
@@ -7,9 +7,9 @@ const Posts = ({ posts, loading }) => {
   }
 
   return (
-    <table className='table'>
-      <thead className='thead'>
-        <tr className='headerRow'>
+    <table className="table">
+      <thead className="thead">
+        <tr className="headerRow">
           <th>Name</th>
           <th>Description</th>
           <th>Owner</th>
@@ -17,8 +17,8 @@ const Posts = ({ posts, loading }) => {
         </tr>
       </thead>
       <tbody>
-        {posts.map(post => (
-          <tr key={post.id} className='postRow'>
+        {posts.map((post) => (
+          <tr key={post.id} className="postRow">
             <td>{post.name}</td>
             <td>{post.description}</td>
             <td>{post.owner.login}</td>
