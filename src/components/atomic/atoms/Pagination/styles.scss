@@ -1,0 +1,39 @@
+.paginationWrapper {
+  width: 300px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  .header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .pageList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .items {
+    list-style: none;
+    padding: 8px;
+  }
+
+  .listButton {
+    display: inline-block;
+    border-radius: 8px;
+    height: 48px;
+    width: 48px;
+    &:hover {
+      background-color: gray;
+      transform: scale(1.2);
+    }
+    &:active {
+      background-color: gray;
+    }
+    &.isSelected {
+      background-color: gray;
+    }
+  }
+}

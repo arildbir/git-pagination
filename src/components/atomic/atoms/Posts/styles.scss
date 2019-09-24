@@ -1,0 +1,25 @@
+.table {
+  table-layout: fixed;
+  width: 100%;
+  thead {
+    background-color: rgb(73, 73, 73);
+    line-height: 40px;
+
+    .headerRow {
+      color: white;
+    }
+  }
+
+  .postRow:nth-child(2n) {
+    td {
+      background-color: rgba(194, 191, 191, 0.39);
+    }
+  }
+
+  .postRow {
+    td {
+      padding: 16px 16px;
+      word-break: break-word;
+    }
+  }
+}
