@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import cn from "classnames";
-import "./styles.scss";
+import React, { useState, useEffect } from 'react';
+import cn from 'classnames';
+import './styles.scss';
 
-const Pagination = ({ numberOfPages, changePaginationPage, loading, currentPage }) => {
+const Pagination = ({
+  numberOfPages, changePaginationPage, loading, currentPage,
+}) => {
   const pageNumbers = [];
   const [selectedButton, setSelectedButton] = useState(currentPage);
 
@@ -10,7 +12,7 @@ const Pagination = ({ numberOfPages, changePaginationPage, loading, currentPage 
     setSelectedButton(currentPage);
   }, [currentPage]);
 
-  for (let i = 1; i <= numberOfPages; i++) {
+  for (let i = 1; i <= numberOfPages; i += 1) {
     pageNumbers.push(i);
   }
 
@@ -19,14 +21,15 @@ const Pagination = ({ numberOfPages, changePaginationPage, loading, currentPage 
   }
 
   return (
-    <nav className='paginationWrapper'>
-      <h3 className='header'>change page</h3>
-      <ul className='pageList'>
+    <nav className="paginationWrapper">
+      <h3 className="header">change page</h3>
+      <ul className="pageList">
         {pageNumbers.map((number, idx) => (
-          <li key={number} className='items'>
+          <li key={number} className="items">
             <button
-              className={cn("listButton", {
-                isSelected: idx + 1 === selectedButton
+              type="button"
+              className={cn('listButton', {
+                isSelected: idx + 1 === selectedButton,
               })}
               onClick={() => {
                 changePaginationPage(number);
